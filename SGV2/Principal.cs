@@ -284,6 +284,8 @@ namespace SGV2
             y += 20;
             e.Graphics.DrawString(" =====================================", barras, Brushes.Black, new RectangleF(0, y, ticketWidthInPoints, 20));
 
+
+      
             if (cbuAlias != "")
             {
                 BarcodeWriter br = new BarcodeWriter();
@@ -295,7 +297,7 @@ namespace SGV2
 
             y += 130;
 
-            e.Graphics.DrawString("¡GRACIAS POR SU COMPRA!", fontTitles, Brushes.Black, new RectangleF(20, y + 50, ticketWidthInPoints - 60, 30));
+            e.Graphics.DrawString("¡GRACIAS POR SU COMPRA!", fontTitles, Brushes.Black, new RectangleF(10, y + 50, ticketWidthInPoints, 30));
 
 
 

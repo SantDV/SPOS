@@ -1,0 +1,9 @@
+C:\Users\SANTIAGO\source\repos\SGV2\SGV2\obj\Debug\net6.0-windows\SSGV.csproj.AssemblyReference.cache
+C:\Users\SANTIAGO\source\repos\SGV2\SGV2\obj\Debug\net6.0-windows\SGV2.Options.resources
+C:\Users\SANTIAGO\source\repos\SGV2\SGV2\obj\Debug\net6.0-windows\SGV2.Principal.resources
+C:\Users\SANTIAGO\source\repos\SGV2\SGV2\obj\Debug\net6.0-windows\SSGV.Properties.Resources.resources
+C:\Users\SANTIAGO\source\repos\SGV2\SGV2\obj\Debug\net6.0-windows\SSGV.csproj.GenerateResource.cache
+C:\Users\SANTIAGO\source\repos\SGV2\SGV2\obj\Debug\net6.0-windows\SSGV.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\SANTIAGO\source\repos\SGV2\SGV2\obj\Debug\net6.0-windows\SSGV.AssemblyInfoInputs.cache
+C:\Users\SANTIAGO\source\repos\SGV2\SGV2\obj\Debug\net6.0-windows\SSGV.AssemblyInfo.cs
+C:\Users\SANTIAGO\source\repos\SGV2\SGV2\obj\Debug\net6.0-windows\SSGV.csproj.CoreCompileInputs.cache
