@@ -15,6 +15,10 @@ namespace SGV2
         string totalTicket = string.Empty;
         string medioDePago = string.Empty;
 
+        List<String> id_producto = new List<String>();
+        List<String> cantidad = new List<String>();
+        List<String> precio_unitario = new List<String>();
+
         string storeName = string.Empty;
         string address = string.Empty;
         string cuit = string.Empty;
@@ -94,8 +98,7 @@ namespace SGV2
 
 
             return listaProducto;
-            //txtBuscador.AutoCompleteCustomSource = listaProducto;
-            //txtBuscarID.AutoCompleteCustomSource = listaProducto;
+
 
         }
         private void productsCount()
@@ -185,6 +188,8 @@ namespace SGV2
         private void btnContinue_Click(object sender, EventArgs e)
         {
             Connection saveSale = new Connection();
+
+
 
             this.idTicket = saveSale.saveSale(lblTotalPesos.Text);
 

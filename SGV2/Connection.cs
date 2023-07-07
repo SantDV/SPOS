@@ -142,7 +142,10 @@ namespace SGV2
 
                 if (reader.HasRows && reader.Read())
                 {
-                    return Convert.ToSingle(reader["id"]);
+                    float saleId = Convert.ToSingle(reader["id"]);
+
+                    SaveSaleDetails(saleId);
+                    return saleId;
                 }
             }
             catch (Exception ex)
@@ -159,6 +162,13 @@ namespace SGV2
             }
             return 0;
             
+        }
+
+        public void SaveSaleDetails(float saleId)
+        {
+            MySqlConnection conn = Connect();
+
+            string insertDetails = "INSERT INTO detalles_venta(venta_id, producto_id, cantidad, precio_unitario) values();";
         }
 
         public void saveOptions(string name, string address, string cuit, string cbuAlias)
