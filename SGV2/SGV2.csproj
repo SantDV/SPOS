@@ -10,7 +10,12 @@
 
   <ItemGroup>
     <PackageReference Include="MySql.Data" Version="8.0.33" />
-    <PackageReference Include="ZXing.Net" Version="0.16.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="zxing">
+      <HintPath>..\..\..\..\Downloads\zxing.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
   <ItemGroup>

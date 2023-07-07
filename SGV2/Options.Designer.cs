@@ -38,75 +38,84 @@
             label3 = new Label();
             btnSave = new Button();
             lblrestarMessage = new Label();
+            pbgenerar = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pbgenerar).BeginInit();
             SuspendLayout();
             // 
             // txtCbuAlias
             // 
-            txtCbuAlias.Location = new Point(26, 259);
+            txtCbuAlias.CharacterCasing = CharacterCasing.Upper;
+            txtCbuAlias.Location = new Point(338, 63);
             txtCbuAlias.Name = "txtCbuAlias";
-            txtCbuAlias.Size = new Size(283, 23);
+            txtCbuAlias.Size = new Size(250, 23);
             txtCbuAlias.TabIndex = 0;
+            txtCbuAlias.TextChanged += txtCbuAlias_TextChanged;
             // 
             // lblCbuAlias
             // 
             lblCbuAlias.AutoSize = true;
-            lblCbuAlias.Location = new Point(136, 241);
+            lblCbuAlias.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblCbuAlias.Location = new Point(469, 40);
             lblCbuAlias.Name = "lblCbuAlias";
-            lblCbuAlias.Size = new Size(68, 15);
+            lblCbuAlias.Size = new Size(31, 18);
             lblCbuAlias.TabIndex = 1;
-            lblCbuAlias.Text = "CBU o Alias";
+            lblCbuAlias.Text = "QR";
             // 
             // txtCuit
             // 
-            txtCuit.Location = new Point(26, 195);
+            txtCuit.Location = new Point(27, 220);
             txtCuit.Name = "txtCuit";
-            txtCuit.Size = new Size(283, 23);
+            txtCuit.Size = new Size(250, 23);
             txtCuit.TabIndex = 2;
+            txtCuit.TextChanged += txtCuit_TextChanged;
             // 
             // txtAddress
             // 
-            txtAddress.Location = new Point(26, 130);
+            txtAddress.Location = new Point(27, 145);
             txtAddress.Name = "txtAddress";
-            txtAddress.Size = new Size(283, 23);
+            txtAddress.Size = new Size(250, 23);
             txtAddress.TabIndex = 3;
             // 
             // txtName
             // 
-            txtName.Location = new Point(26, 63);
+            txtName.Location = new Point(27, 73);
             txtName.Name = "txtName";
-            txtName.Size = new Size(283, 23);
+            txtName.Size = new Size(250, 23);
             txtName.TabIndex = 4;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(150, 177);
+            label1.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(130, 190);
             label1.Name = "label1";
-            label1.Size = new Size(32, 15);
+            label1.Size = new Size(43, 18);
             label1.TabIndex = 5;
             label1.Text = "CUIT";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(136, 112);
+            label2.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(121, 114);
             label2.Name = "label2";
-            label2.Size = new Size(57, 15);
+            label2.Size = new Size(75, 18);
             label2.TabIndex = 6;
             label2.Text = "Dirección";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(123, 45);
+            label3.Font = new Font("Arial", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(88, 40);
             label3.Name = "label3";
-            label3.Size = new Size(104, 15);
+            label3.Size = new Size(133, 18);
             label3.TabIndex = 7;
             label3.Text = "Nombre comercio";
             // 
             // btnSave
             // 
-            btnSave.Location = new Point(136, 300);
+            btnSave.Location = new Point(120, 288);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(75, 23);
             btnSave.TabIndex = 8;
@@ -117,19 +126,30 @@
             // lblrestarMessage
             // 
             lblrestarMessage.AutoSize = true;
+            lblrestarMessage.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             lblrestarMessage.ForeColor = Color.Red;
-            lblrestarMessage.Location = new Point(104, 331);
+            lblrestarMessage.Location = new Point(88, 326);
             lblrestarMessage.Name = "lblrestarMessage";
-            lblrestarMessage.Size = new Size(146, 15);
+            lblrestarMessage.Size = new Size(158, 16);
             lblrestarMessage.TabIndex = 9;
             lblrestarMessage.Text = "Debe reiniciar el programa";
             lblrestarMessage.Visible = false;
+            // 
+            // pbgenerar
+            // 
+            pbgenerar.Location = new Point(338, 92);
+            pbgenerar.Name = "pbgenerar";
+            pbgenerar.Size = new Size(250, 250);
+            pbgenerar.SizeMode = PictureBoxSizeMode.CenterImage;
+            pbgenerar.TabIndex = 10;
+            pbgenerar.TabStop = false;
             // 
             // Options
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(343, 353);
+            ClientSize = new Size(633, 389);
+            Controls.Add(pbgenerar);
             Controls.Add(lblrestarMessage);
             Controls.Add(btnSave);
             Controls.Add(label3);
@@ -142,6 +162,8 @@
             Controls.Add(txtCbuAlias);
             Name = "Options";
             Text = "Options";
+            Load += Options_Load;
+            ((System.ComponentModel.ISupportInitialize)pbgenerar).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -158,5 +180,6 @@
         private Label label3;
         private Button btnSave;
         private Label lblrestarMessage;
+        private PictureBox pbgenerar;
     }
 }

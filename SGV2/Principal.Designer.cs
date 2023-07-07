@@ -66,6 +66,8 @@
             lblProductCount = new Label();
             lblTicketN = new Label();
             lblTicketNº = new Label();
+            cmbMedioDePago = new ComboBox();
+            lblMedioDePago = new Label();
             panelProductList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvLProductlist).BeginInit();
             panelSearchBar.SuspendLayout();
@@ -311,7 +313,7 @@
             button1.BackgroundImageLayout = ImageLayout.Center;
             button1.Font = new Font("Segoe UI", 22F, FontStyle.Regular, GraphicsUnit.Point);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(923, 669);
+            button1.Location = new Point(930, 669);
             button1.Name = "button1";
             button1.Size = new Size(48, 48);
             button1.TabIndex = 7;
@@ -325,9 +327,9 @@
             btnContinue.BackgroundImageLayout = ImageLayout.Center;
             btnContinue.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnContinue.ForeColor = Color.White;
-            btnContinue.Location = new Point(991, 669);
+            btnContinue.Location = new Point(984, 669);
             btnContinue.Name = "btnContinue";
-            btnContinue.Size = new Size(114, 48);
+            btnContinue.Size = new Size(121, 48);
             btnContinue.TabIndex = 6;
             btnContinue.Text = "CONTINUAR";
             btnContinue.UseVisualStyleBackColor = false;
@@ -433,11 +435,31 @@
             lblTicketNº.Text = "0.0";
             lblTicketNº.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // cmbMedioDePago
+            // 
+            cmbMedioDePago.FormattingEnabled = true;
+            cmbMedioDePago.Items.AddRange(new object[] { "EFECTIVO", "DÉBITO", "CRÉDITO", "TRANSFERENCIA" });
+            cmbMedioDePago.Location = new Point(955, 566);
+            cmbMedioDePago.Name = "cmbMedioDePago";
+            cmbMedioDePago.Size = new Size(121, 23);
+            cmbMedioDePago.TabIndex = 17;
+            // 
+            // lblMedioDePago
+            // 
+            lblMedioDePago.AutoSize = true;
+            lblMedioDePago.Location = new Point(966, 526);
+            lblMedioDePago.Name = "lblMedioDePago";
+            lblMedioDePago.Size = new Size(95, 15);
+            lblMedioDePago.TabIndex = 18;
+            lblMedioDePago.Text = "MEDIO DE PAGO";
+            // 
             // Principal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1117, 729);
+            Controls.Add(lblMedioDePago);
+            Controls.Add(cmbMedioDePago);
             Controls.Add(lblTicketNº);
             Controls.Add(lblTicketN);
             Controls.Add(lblProductCount);
@@ -501,5 +523,7 @@
         private Label lblTicketN;
         private Label lblTicketNº;
         private Button lblOptions;
+        private ComboBox cmbMedioDePago;
+        private Label lblMedioDePago;
     }
 }

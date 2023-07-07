@@ -192,14 +192,13 @@ namespace SGV2
         }
 
 
-        public DataTable storeDataLoader()
+        public MySqlDataReader storeDataLoader()
         {
 
             MySqlConnection conexionDB = Connect();
-            DataTable datable = new DataTable();
             MySqlDataReader resultado;
 
-            string select = "SELECT name, address, cuit, abu_alias where id = 1;";
+            string select = "SELECT name, address, cuit, cbu_alias from datos_negocio where id = 1;";
 
 
             try
@@ -214,7 +213,7 @@ namespace SGV2
 
                 resultado = actTableProdcutos.ExecuteReader();
 
-                datable.Load(resultado);
+                return resultado;
 
 
             }
@@ -224,7 +223,7 @@ namespace SGV2
             }
             conexionDB.Close();
 
-            return datable;
+            return null;
 
         }
 

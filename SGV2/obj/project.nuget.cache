@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "zJfk5KMOGlBLo9Q2eEPOMYS1fUPixwU3mZwyMtngv9Fu/UWGQ5AEn//0WPEyoKccRkSpgSUwKWzlliiRFMrooQ==",
+  "dgSpecHash": "q9ASJniLK/cDKCJhJ7TesjI/sI0P9mHWXfgaqvUlVUjoGZfDEPaToOruJWTslnE8CuAXOC/T7bVeK5SUsddw0g==",
   "success": true,
   "projectFilePath": "C:\\Users\\SANTIAGO\\source\\repos\\SGV2\\SGV2\\SGV2.csproj",
   "expectedPackageFiles": [
@@ -33,8 +33,7 @@
     "C:\\Users\\SANTIAGO\\.nuget\\packages\\system.text.json\\7.0.1\\system.text.json.7.0.1.nupkg.sha512",
     "C:\\Users\\SANTIAGO\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
     "C:\\Users\\SANTIAGO\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
-    "C:\\Users\\SANTIAGO\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512",
-    "C:\\Users\\SANTIAGO\\.nuget\\packages\\zxing.net\\0.16.9\\zxing.net.0.16.9.nupkg.sha512"
+    "C:\\Users\\SANTIAGO\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512"
   ],
   "logs": []
 }
