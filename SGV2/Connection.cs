@@ -1,6 +1,5 @@
 ﻿using Microsoft.VisualBasic;
 using MySql.Data.MySqlClient;
-
 using System.Data;
 
 
@@ -119,7 +118,7 @@ namespace SGV2
 
         }
 
-        public float saveSale(string total)
+        public float saveSale(string total, List<String> id, List<String> cantidad, List<String> precioU)
         {
 
             MySqlConnection connectionDB = Connect();
@@ -144,7 +143,7 @@ namespace SGV2
                 {
                     float saleId = Convert.ToSingle(reader["id"]);
 
-                    SaveSaleDetails(saleId);
+                    SaveSaleDetails(saleId, id, cantidad, precioU);
                     return saleId;
                 }
             }
@@ -164,11 +163,15 @@ namespace SGV2
             
         }
 
-        public void SaveSaleDetails(float saleId)
+        public void SaveSaleDetails(float saleId, List<String> id, List<String> cantidad, List<String> precioU)
         {
             MySqlConnection conn = Connect();
 
-            string insertDetails = "INSERT INTO detalles_venta(venta_id, producto_id, cantidad, precio_unitario) values();";
+            for (int i=0; i <= id.Count; i++)
+            {
+                string insertDetails = $"INSERT INTO detalles_venta(venta_id, producto_id, cantidad, precio_unitario) values({saleId}, {Convert.ToInt32(id[i])}, {Convert.ToInt32(cantidad[i])}, {precioU[i].ToString()});";
+            }
+            
         }
 
         public void saveOptions(string name, string address, string cuit, string cbuAlias)

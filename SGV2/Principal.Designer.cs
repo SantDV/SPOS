@@ -262,7 +262,7 @@
             txtPrice.Size = new Size(100, 23);
             txtPrice.TabIndex = 4;
             txtPrice.TextAlign = HorizontalAlignment.Right;
-            txtPrice.TextChanged += txtPrice_TextChanged;
+    
             // 
             // txtName
             // 

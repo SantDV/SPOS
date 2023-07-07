@@ -54,11 +54,13 @@ namespace SGV2
         public List<string> getStoreData()
         {
 
-            List<string> data = new List<string>();
-            data.Add(storeName);
-            data.Add(address);
-            data.Add(cuit);
-            data.Add(cbuAlias);
+            List<string> data = new List<string>
+            {
+                storeName,
+                address,
+                cuit,
+                cbuAlias
+            };
 
             return data;
         }
@@ -180,18 +182,30 @@ namespace SGV2
             txtName.AutoCompleteCustomSource = autoCompletar("Nombre");
         }
 
-        private void txtPrice_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnContinue_Click(object sender, EventArgs e)
         {
+
+
             Connection saveSale = new Connection();
 
+            foreach(DataGridViewRow row in dgvLProductlist.Rows)
+            {
+                if (row.Cells["ID"].Value == null || string.IsNullOrEmpty(row.Cells["ID"].Value.ToString()))
+                {
+                    continue;
+                }
+                else
+                {
+                    id_producto.Add(Convert.ToString(row.Cells["ID"].Value));
+                    cantidad.Add(Convert.ToString(row.Cells["Cantidad"].Value));
+                    precio_unitario.Add(Convert.ToString(row.Cells["Precio"].Value));
+                }
+
+            }
 
 
-            this.idTicket = saveSale.saveSale(lblTotalPesos.Text);
+            this.idTicket = saveSale.saveSale(lblTotalPesos.Text, id_producto, cantidad, precio_unitario);
 
             printDocument1 = new PrintDocument();
             PrinterSettings ps = new PrinterSettings();
